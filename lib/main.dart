@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
@@ -23,13 +24,16 @@ class MyHome extends StatefulWidget{
 class _MyHomeState extends State<MyHome> {
   @override
   Widget build(BuildContext context) {
+    double deviceWidth = MediaQuery.of(context).size.width;
+    double deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         body: ListView(
-            children :<Widget>[ Column(
+            children :<Widget>[
+        Column(
                 children:<Widget>[
                   Container(
-                    height: 40,
-                    width: 400,
+                    height: deviceHeight * 0.06,
+                    width: deviceWidth * 0.90,
                     margin: EdgeInsets.all(20.0),
                     padding: EdgeInsets.all(12.0),
 
@@ -115,6 +119,8 @@ class _MyHomeState extends State<MyHome> {
                   ),
 
                   Container(
+                    height: deviceHeight * 0.06,
+                    width: deviceWidth * 0.90,
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children:<Widget>[
@@ -137,19 +143,19 @@ class _MyHomeState extends State<MyHome> {
                     ),
                   ),
                   Container(
-                    height: 40,
-                    width: 240,
-                    margin: EdgeInsets.fromLTRB(35.00, 00, 35.00, 10.00),
-                    padding: EdgeInsets.all(12.0),
+                    height: deviceHeight * 0.05,
+                    width: deviceWidth * 0.40,
+                    margin: EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(12.00),
                     decoration:BoxDecoration(
                         color:Colors.black12
                     ),
                     child:Text("EXPONENTIAL",style: TextStyle(color:Colors.grey,fontSize:10,fontWeight: FontWeight.bold),),
                   ),
                   Container(
-                    height: 40,
-                    width: 240,
-                    margin: EdgeInsets.all(8.0),
+                    height: deviceHeight * 0.06,
+                    width: deviceWidth * 0.94,
+                    margin: EdgeInsets.all(3.0),
                     padding: EdgeInsets.all(12.0),
                     decoration:BoxDecoration(
                         color:Colors.black12
@@ -169,13 +175,14 @@ class _MyHomeState extends State<MyHome> {
                           ),
                           Container(
                             height: 30,
-                            width: 28,
+                            width: 33,
                             child: Text("Type",style: TextStyle(color: Colors.grey,fontSize: 10,fontWeight: FontWeight.bold),),
                           )
                         ]
                     ),
                   ),
                   Container(
+                    width: deviceWidth * 0.96,
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children:<Widget>[
@@ -243,6 +250,7 @@ class _MyHomeState extends State<MyHome> {
                     ),
                   ),
                   Container(
+                    margin: EdgeInsets.fromLTRB(00,30.00,00,00),
                     child: Text("Technical Indicator",style: TextStyle(color:Colors.black,fontSize:20,fontFamily:'RobotoMono',fontWeight: FontWeight.bold ),),
                   ),
                   Container(
@@ -258,6 +266,8 @@ class _MyHomeState extends State<MyHome> {
                       Text("Strong Sell",style: TextStyle(color:Colors.white,fontSize:10,fontWeight: FontWeight.bold,),),)
                   ),
                   Container(
+                    height: deviceHeight * 0.06,
+                    width: deviceWidth * 0.90,
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children:<Widget>[
@@ -280,8 +290,8 @@ class _MyHomeState extends State<MyHome> {
                     ),
                   ),
                   Container(
-                    height: 40,
-                    width: 240,
+                    height: deviceHeight * 0.06,
+                    width: deviceWidth * 0.95,
                     margin: EdgeInsets.all(8.0),
                     padding: EdgeInsets.all(12.0),
                     decoration:BoxDecoration(
@@ -309,6 +319,7 @@ class _MyHomeState extends State<MyHome> {
                     ),
                   ),
                   Container(
+                    width: deviceWidth * 94,
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children:<Widget>[
@@ -376,19 +387,21 @@ class _MyHomeState extends State<MyHome> {
                     ),
                   ),
                     Container(
+                      margin: EdgeInsets.fromLTRB(00,30.00,00,00),
                       child: Text("Pivot Point",style: TextStyle(color:Colors.black,fontSize:20,fontFamily:'RobotoMono',fontWeight: FontWeight.bold ),),
                     ),
                   Container(
-                    height: 40,
-                    width: 240,
-                    margin: EdgeInsets.fromLTRB(35.00, 10.00, 35.00, 10.00),
-                    padding: EdgeInsets.all(12.0),
+                    height: deviceHeight * 0.05,
+                    width: deviceWidth * 0.40,
+                    margin: EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(12.00),
                     decoration:BoxDecoration(
                         color:Colors.black12
                     ),
                     child:Text("CLASSIC",style: TextStyle(color:Colors.grey,fontSize:10,fontWeight: FontWeight.bold),),
                   ),
                   Container(
+                      width: deviceWidth * 0.96,
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children:<Widget>[
